@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
- 
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
+    <title>Import Surgery Profile</title>
 </head>
 
 <body>
@@ -29,19 +29,25 @@
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
                 <a class="navbar-brand" href="#">LOGO</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto navbar-right-top">
-                        
+
                         <li class="nav-item dropdown nav-user">
-                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
-                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
+                                    src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown"
+                                aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
                                     <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
                                 </div>
-                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                                <a class="dropdown-item" href="login.html"><i
+                                        class="fas fa-power-off mr-2"></i>Logout</a>
                             </div>
                         </li>
                     </ul>
@@ -65,7 +71,8 @@
                             </li>
                             <li class="nav-item ">
                                 <a class="nav-link active" href="#">
-                                    <i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
+                                    <i class="fa fa-fw fa-user-circle"></i>Dashboard <span
+                                        class="badge badge-success">6</span></a>
                             </li>
                         </ul>
                     </div>
@@ -87,12 +94,14 @@
                     <div class="row">
                         <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="page-header">
-                                <h2 class="pageheader-title">Medical Supply Request </h2>
+                                <h2 class="pageheader-title">Import Surgery Profile </h2>
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Medical Supply Request</li>
+                                            <li class="breadcrumb-item"><a href="#"
+                                                    class="breadcrumb-link">Dashboard</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Import Surgery
+                                                Profile</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -104,55 +113,52 @@
                     <!-- ============================================================== -->
                     <div class="ecommerce-widget">
 
+                        <!-- ============================================================== -->
+                        <!-- import file  -->
+                        <!-- ============================================================== -->
                         <div class="row">
-                                          <!-- recent orders  -->
+                            <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
+                                <input type="file" onchange="ExcelExport(event)" id="file" />
+                            </div>
+                            <div class="card"></br></div> <!-- break line -->
                             <!-- ============================================================== -->
+                            <!-- end of import file  -->
+                            <!-- ============================================================== -->
+                            <!-- surgery information  -->
+                            <!-- ============================================================== -->
+
                             <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Recent Orders</h5>
+                                    <h5 class="card-header">Surgery Profile Information</h5>
                                     <div class="card-body p-0">
-                                        <div class="table-responsive">
-                                            <table class="table">
-                                                <thead class="bg-light">
-                                                    <tr class="border-0">
-                                                        <th class="border-0">No.</th>
-                                                        <th class="border-0">Surgery Code</th>
-                                                        <th class="border-0">Surgery Name</th>
-                                                        <th class="border-0">Patient Name</th>
-                                                        <th class="border-0">Surgeon Name</th>
-                                                        <th class="border-0">Expected surgery day </th>
-                                                    </tr>
-                                                </thead>
-                                                <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>
-                                                            <div class="m-r-10"><a href="#">MMX34583</a></div>
-                                                        </td>
-                                                        <td>Trần Thị Công Lam</td>
-                                                        <td>Nguyễn Trần Công Lý </td>
-                                                        <td>Phẫu thuật ruột thừa</td>
-                                                        <td>15/03/2019</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>
-                                                            <div class="m-r-10"><a href="#">MMX34083</a></div>
-                                                        </td>
-                                                        <td>Trần Thị Lan</td>
-                                                        <td>Nguyễn Văn Quả </td>
-                                                        <td>Phẫu thuật hẹp van tim</td>
-                                                        <td>15/03/2019</td>
-                                                    </tr>
-                                                    
-                                                </tbody>
-                                            </table>
-                                        </div>
+
+                                        <table class="table" id="profile">
+                                            <thead class="bg-light">
+                                                <tr class="border-0">
+                                                    <th class="border-0">Patient Name</th>
+                                                    <th class="border-0">Gender</th>
+                                                    <th class="border-0">Medical Record</th>
+                                                    <th class="border-0">Surgery Name</th>
+                                                    <th class="border-0">Surgeon</th>
+                                                    <th class="border-0">Surgery Excepted Date</th>
+                                                    <th class="border-0">Surgery Weight</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+
+                                            </tbody>
+                                        </table>
                                     </div>
                                 </div>
                             </div>
                             <!-- ============================================================== -->
-                            <!-- end recent orders  -->
+                            <!-- end of surgery information  -->
+                            <!-- ============================================================== -->
+                            <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-1">
+                                <input type="submit" value="Import All" onclick="saveSurgeryProfile()" />
+                                <input type="submit" value="Cancel"
+                                    onClick="javascript:window.location.href='import.html'" />
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -186,6 +192,85 @@
     <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
     <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
     <script src="assets/libs/js/dashboard-ecommerce.js"></script>
+    <!-- script excel to JSON -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.10.8/xlsx.full.min.js">
+    </script>
+    <script>
+        function ExcelExport(event) {
+            var input = event.target;
+            var reader = new FileReader();
+            reader.onload = function () {
+                var fileData = reader.result;
+                var wb = XLSX.read(fileData, { type: 'binary' });
+
+                wb.SheetNames.forEach(function (sheetName) {
+                    var rowObj = XLSX.utils.sheet_to_row_object_array(wb.Sheets[sheetName]);
+                    
+                    switch (sheetName) {
+                        case "SurgeryProfile":
+                            parseInfo(rowObj);
+                            break;
+                        case "Sheet2":
+                            parseSupply(rowObj);
+                            break;
+                    }
+                })
+            };
+            reader.readAsBinaryString(input.files[0]);
+        };
+        function parseInfo(jsonObj) {
+            // console.log(jsonObj);
+            var table = document.getElementById('profile').getElementsByTagName('tbody')[0];
+            for (var i = 0; i < jsonObj.length; i++) {
+                var newRow = table.insertRow(table.rows.length);
+                var newColumn;
+                
+                newColumn = newRow.insertCell(0);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Patient Name"]));
+                newColumn = newRow.insertCell(1);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Patient Gender"]));
+                newColumn = newRow.insertCell(2);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Medical Record"]));
+                newColumn = newRow.insertCell(3);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Surgery Name"]));
+                newColumn = newRow.insertCell(4);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Surgeon Name"]));
+                newColumn = newRow.insertCell(5);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Surgery Assigned Date"] + 
+                " - " + jsonObj[i]["Surgery Assigned Time"]));
+                newColumn = newRow.insertCell(6);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Surgery Weight"]));
+            }
+        }
+        // done
+        function parseSupply(jsonStr) {
+            // console.log(jsonObj);
+            var table = document.getElementById('supply').getElementsByTagName('tbody')[0];
+            for (var i = 0; i < jsonStr.length; i++) {
+                var newRow = table.insertRow(table.rows.length);
+                var newColumn = newRow.insertCell(0);
+                newColumn.appendChild(document.createTextNode(i + 1));
+                newColumn = newRow.insertCell(1);
+                newColumn.appendChild(document.createTextNode(jsonStr[i].Code));
+                newColumn = newRow.insertCell(2);
+                newColumn.appendChild(document.createTextNode(jsonStr[i].Name));
+                newColumn = newRow.insertCell(3);
+                newColumn.appendChild(document.createTextNode(jsonStr[i].Quantity));
+            }
+        }
+        function saveSurgeryProfile() {
+            //imprort file check
+            // alert("Surgery Profile Saved");
+            window.location.replace("import.html");
+            alert("Surgery Profile Saved");
+
+            //TODO: send JSON object to sever and save profile and do appropriate actions.
+        };
+    </script>
 </body>
- 
+
 </html>
