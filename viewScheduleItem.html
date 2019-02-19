@@ -1,0 +1,132 @@
+<html lang="en">
+<head>
+       <!-- Required meta tags -->
+       <meta charset="utf-8">
+       <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+       <!-- Bootstrap CSS -->
+       <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+       <!-- <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"> -->
+       <link rel="stylesheet" href="assets/libs/css/style.css">
+       <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+
+       <link rel="stylesheet" href="css/tungStyle.css">
+       <title>Surgery Management System</title>
+</head>
+<body>
+    <div class="dashboard-main-wrapper">
+        <div class="dashboard-header">
+            <nav class="navbar navbar-expand-lg bg-white fixed-top">
+                <a class="navbar-brand" href="./importFile.html">EBSMS</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto navbar-right-top">
+
+                        <li class="nav-item dropdown nav-user">
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt=""
+                                    class="user-avatar-md rounded-circle"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                                <div class="nav-user-info">
+                                    <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
+                                </div>
+                                <a class="dropdown-item" href="#"><i class="fas fa-power-off mr-2"></i>Logout</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="container-scheduleItem">
+            <div class="dashboard-ecommerce">
+                <div class="container-fluid dashboard-content">
+                    <div class="row">
+                        <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="title-surgery-shift">
+                                <h2>Information of Surgery Shift</h2>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="div-surgery-report">
+                        <div>
+                            <div class="div-info-patient">
+                                <div><b>Patient Name:</b> <span>Lê Văn Đạt</span></div>
+                                <div><b>Gender:</b> <span>Nam</span></div>
+                                <div><b>Age:</b> <span>53</span></div>   
+                            </div>
+                            <div class="div-info-surgery-shift">
+                                <div><b>Specialty:</b> <span>Khoa Phẫu Thuật Chi Trên</span></div>
+                                <div><b>Surgery Name:</b> <span>Phẫu thuật kết hợp xương (KHX) gãy xương bã vai</span></div>
+                                <div><b>Type Of Surgery:</b> <span>Loại 1</span></div>
+                                <div><b>Start Time:</b> <span>7:30 18/02/2019</span></div>
+                                <div><b>End Time:</b> <span>9:30 18/02/2019</span></div>
+                            </div>
+                        </div>
+                        <br/>
+                        <b>Surgery Information Detail:</b>
+                        <div class="div-editable-information">
+                            <div class="div-ekip">
+                                <div><b>Performed Ekip:</b></div>
+                                <br/>
+                                <table class="table-ekip">
+                                    <tr>
+                                        <td><b>Surgeon:</b></td>
+                                        <td>Lê Hoàng Anh</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Surgeon:</b></td>
+                                        <td>Lê Hoàng Em</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Anesthesia Doctor:</b></td>
+                                        <td>Nguyễn Văn A</td>
+                                    </tr>
+                                    <tr>
+                                        <td><b>Anesthesia Doctor:</b></td>
+                                        <td>Nguyễn Văn B</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="div-procedure">
+                                <div><b>Surgery Procedure:</b></div>
+                                <br/>
+                                <textarea rows="10" cols="50">bn nằm nghiêng dưới mê NKQ
+Tiên cầm máu tại chỗ bằng nước cất và Addrenailin
+Rạch da theo hình L
+bóc tách cơ dưới gai bộc lộ ố gãy xương bả vai
+Thấy gãy cạnh tròng và cạnh ngoài xương bả vai
+                                </textarea>
+                            </div>
+                        </div>
+                        <br/>
+                        <input type="button" value="Preview Surgery Report"/>
+                        <a href="./viewSchedule.html"><button>Back</button></a>    
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <!-- bootstap bundle js -->
+    <script src="assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- slimscroll js -->
+    <script src="assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <!-- main js -->
+    <script src="assets/libs/js/main-js.js"></script>
+    <!-- chart chartist js -->
+    <script src="assets/vendor/charts/chartist-bundle/chartist.min.js"></script>
+    <!-- sparkline js -->
+    <script src="assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
+    <!-- morris js -->
+    <script src="assets/vendor/charts/morris-bundle/raphael.min.js"></script>
+    <script src="assets/vendor/charts/morris-bundle/morris.js"></script>
+    <!-- chart c3 js -->
+    <script src="assets/vendor/charts/c3charts/c3.min.js"></script>
+    <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+    <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
+    <script src="assets/libs/js/dashboard-ecommerce.js"></script>
+</body>
+</html>

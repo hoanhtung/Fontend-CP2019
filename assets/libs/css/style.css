@@ -156,51 +156,13 @@
    ========================================================================== */
 
 body {
-    font-family: 'Circular Std Book';
+    font-family: 'Roboto', sans-serif';
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
     color: #71748d;
     background-color: #efeff6;
     -webkit-font-smoothing: antialiased;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    color: #3d405c;
-    margin: 0px 0px 15px 0px;
-    font-family: 'Circular Std Medium';
-}
-
-h1 {
-    font-size: 34px;
-}
-
-h2 {
-    font-size: 28px;
-    line-height: 30px;
-}
-
-h3 {
-    font-size: 20px;
-}
-
-h4 {
-    font-size: 16px;
-    line-height: 26px;
-}
-
-h5 {
-    font-size: 15px;
-    line-height: 26px;
-}
-
-h6 {
-    font-size: 12px;
 }
 
 p {
@@ -4493,61 +4455,7 @@ Pills vertical
 5.1.  General
 --------------------*/
 
-.table {
-    margin-bottom: 0px;
-}
 
-.table td,
-.table th {
-    padding: 10px;
-    vertical-align: middle;
-    border-top: 1px solid #e6e6f2;
-    font-weight: normal;
-}
-
-.table thead th {
-    vertical-align: bottom;
-    border-bottom: 2px solid #e6e6f2;
-}
-
-.table thead th,
-.table th {
-    color: #3d405c;
-    font-family: 'Circular Std Medium';
-}
-
-.table-bordered {
-    border: 1px solid #e6e6f2;
-}
-
-.table-bordered td,
-.table-bordered th {
-    border: 1px solid #e6e6f2;
-}
-
-.table-striped tbody tr:nth-of-type(odd) {
-    background-color: rgba(230, 230, 242, .5);
-}
-
-.table-hover tbody tr:hover {
-    background-color: rgba(230, 230, 242, .5);
-}
-
-
-/*-----------------------
-5.2.  Data Tables
---------------------*/
-
-
-/*-- row group table */
-
-tr.group,
-tr.group:hover {
-    background-color: #5969ff !important;
-    color: #fff;
-    font-family: 'Circular Std Medium';
-    font-size: 18px;
-}
 
 
 /*-----------------------

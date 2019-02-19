@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <title>Concept - Bootstrap 4 Admin Dashboard Template</title>
+    <title>Surgery Management System</title>
 </head>
 
 <body>
@@ -28,7 +28,7 @@
         <!-- ============================================================== -->
         <div class="dashboard-header">
             <nav class="navbar navbar-expand-lg bg-white fixed-top">
-                <a class="navbar-brand" href="#">LOGO</a>
+                <a class="navbar-brand" href="./importFile.html">EBSMS</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -64,8 +64,22 @@
                                 Menu
                             </li>
                             <li class="nav-item ">
-                                <a class="nav-link active" href="#">
-                                    <i class="fa fa-fw fa-user-circle"></i>Dashboard <span class="badge badge-success">6</span></a>
+                                <a class="nav-link active" href=""><i class="fa fa-fw fa-user-circle"></i>Dashboard<span
+                                        class="badge badge-success">6</span></a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="./viewSchedule.html">
+                                    <i class="fa fa-fw fa-user-circle"></i>View Surgery Schedule 
+                                    <span class="badge badge-success">6</span>
+                                </a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="./viewSchedule.html"><i class="fa fa-fw fa-user-circle"></i>View
+                                    Schedule</a>
+                            </li>
+                            <li class="nav-item ">
+                                <a class="nav-link active" href="./confirmMSRequest.html"><i class="fa fa-fw fa-user-circle"></i>Confirm
+                                    Medical Supplies</a>
                             </li>
                         </ul>
                     </div>
@@ -109,7 +123,7 @@
                             <!-- ============================================================== -->
                             <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
                                 <div class="card">
-                                    <h5 class="card-header">Recent Orders</h5>
+                                    <h5 class="card-header">Pending Requests for Medical Supply</h5>
                                     <div class="card-body p-0">
                                         <div class="table-responsive">
                                             <table class="table">
@@ -127,23 +141,14 @@
                                                     <tr>
                                                         <td>1</td>
                                                         <td>
-                                                            <div class="m-r-10"><a href="#">MMX34583</a></div>
+                                                            <div class="m-r-10"><a href="requestDetail.html">MMX34583</a></div>
                                                         </td>
                                                         <td>Trần Thị Công Lam</td>
                                                         <td>Nguyễn Trần Công Lý </td>
                                                         <td>Phẫu thuật ruột thừa</td>
                                                         <td>15/03/2019</td>
                                                     </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>
-                                                            <div class="m-r-10"><a href="#">MMX34083</a></div>
-                                                        </td>
-                                                        <td>Trần Thị Lan</td>
-                                                        <td>Nguyễn Văn Quả </td>
-                                                        <td>Phẫu thuật hẹp van tim</td>
-                                                        <td>15/03/2019</td>
-                                                    </tr>
+                                                    
                                                     
                                                 </tbody>
                                             </table>
