@@ -15,7 +15,49 @@
     <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
     <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
     <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
-    <title>Surgery Management System</title>
+    <title>Medical Supply Request Detail</title>
+    <script>
+        var surgeryCode, surgerySupplies;
+
+        function parseJSON(jsonObj) {
+            var table = document.getElementById('listSupply').getElementsByTagName('tbody')[0];
+            for (var i = 0; i < jsonObj.length; i++) {
+                var newRow = table.insertRow(table.rows.length);
+                var newColumn;
+
+                newColumn = newRow.insertCell(0);
+                newColumn.appendChild(document.createTextNode(i + 1));
+                newColumn = newRow.insertCell(1);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["code"]));
+                newColumn = newRow.insertCell(2);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["name"]));
+                newColumn = newRow.insertCell(3);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["quantity"]));
+            }
+        }
+
+        function getRequestDetail() {
+            //get surgery code from url
+            var url_string = window.location.href;
+            var url = new URL(url_string);
+            surgeryCode = url.searchParams.get("code");
+
+            console.log(surgeryCode);
+            //TODO: get medical supply list from API with surgery Code
+            surgerySupplies = [
+                { code: "BG432S23X3", name: "Bông gòn", quantity: 3 },
+                { code: "DMT349S45D3", name: "Dao phẫu thuật", quantity: 3 },
+                { code: "GA25L45C3", name: "Gắp mỏ dài 35cm", quantity: 3 }
+            ];
+            parseJSON(surgerySupplies);
+        }
+
+        function confirmSupply() {
+            //TODO: send api with surgery code = surgeryCode;
+
+            javascript: window.location.href = 'medicalRequest.html';
+        }
+    </script>
 </head>
 
 <body>
@@ -118,7 +160,7 @@
                                     <h5 class="card-header">Medical supplies need</h5>
                                     <div class="card-body p-0">
                                         <div class="table-responsive">
-                                            <table class="table">
+                                            <table class="table" id="listSupply">
                                                 <thead class="bg-light">
                                                     <tr class="border-0">
                                                         <th class="border-0">No.</th>
@@ -128,30 +170,7 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>BG432S23X3</td>
-                                                        <td>Bông gòn</td>
-                                                        <td>10</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>2</td>
-                                                        <td>DMT349S45D3</td>
-                                                        <td>Dao phẫu thuật</td>
-                                                        <td>3</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>3</td>
-                                                        <td>GA25L45C3</td>
-                                                        <td>Gắp mỏ dài 35cm</td>
-                                                        <td>10</td>
-                                                    </tr>
-                                                    <tr>
-                                                        <td>4</td>
-                                                        <td>KIM2390S57X3</td>
-                                                        <td>Kìm phẫu thuật van tim</td>
-                                                        <td>2</td>
-                                                    </tr>
+
                                                 </tbody>
                                             </table>
                                         </div>
@@ -160,8 +179,7 @@
                             </div>
                             <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
                                 <!-- TODO: confirm supply method -->
-                                <input type="submit" value="Confirm"
-                                    onClick="javascript:window.location.href='medicalRequest.html'" />
+                                <input type="submit" value="Confirm" onClick="confirmSupply();" />
                                 <input type="submit" value="Back"
                                     onClick="javascript:window.location.href='medicalRequest.html'" />
                             </div>
@@ -200,6 +218,7 @@
     <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
     <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
     <script src="assets/libs/js/dashboard-ecommerce.js"></script>
+    <script>window.onload = getRequestDetail();</script>
 </body>
 
 </html>

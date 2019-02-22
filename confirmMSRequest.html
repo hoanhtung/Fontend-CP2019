@@ -1,6 +1,6 @@
 <!doctype html>
 <html lang="en">
- 
+
 <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -19,7 +19,57 @@
     <title>Surgery Management System</title>
 =======
     <title>Medical Supply Request</title>
+<<<<<<< HEAD:confirmMSRequest.html
 >>>>>>> 4667b6963cba4759e9f316f9aa5bc2e9eeb2bd3c:medicalRequest.html
+=======
+    <script>
+        function parseJSON(jsonObj) {
+            var table = document.getElementById('request').getElementsByTagName('tbody')[0];
+            for (var i = 0; i < jsonObj.length; i++) {
+                var newRow = table.insertRow(table.rows.length);
+                var newColumn;
+                newColumn = newRow.insertCell(0);
+                newColumn.appendChild(document.createTextNode(i + 1));
+
+                newColumn = newRow.insertCell(1);
+                var a = document.createElement('a');
+                a.appendChild(document.createTextNode(jsonObj[i]["Surgery Code"]));
+                a.href = "requestDetail.html";
+                newColumn.appendChild(a);
+
+                newColumn = newRow.insertCell(2);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Surgery Name"]));
+                newColumn = newRow.insertCell(3);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Patient Name"]));
+                newColumn = newRow.insertCell(4);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Surgeon Name"]));
+                newColumn = newRow.insertCell(5);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Expected surgery day"]));
+            }
+        }
+        function getMedicalRequest() {
+            //get JSON from API ....
+            var requestJSON = [
+                {
+                    "Surgery Code": "MMX34583",
+                    "Surgery Name": "Trần Thị Công Lam",
+                    "Patient Name": "Nguyễn Trần Công Lý",
+                    "Surgeon Name": "Phẫu thuật ruột thừa",
+                    "Expected surgery day": "15/03/2019"
+                },
+                {
+                    "Surgery Code": "MMX34583-A",
+                    "Surgery Name": "Trần Thị Công Lam A",
+                    "Patient Name": "Nguyễn Trần Công Lý",
+                    "Surgeon Name": "Phẫu thuật ruột thừa",
+                    "Expected surgery day": "15/03/2019"
+                }
+            ];
+            console.log(requestJSON);
+            parseJSON(requestJSON);
+        }
+    </script>
+>>>>>>> e933af9f0930883f2ab93d15b72095fcfff99a3d:medicalRequest.html
 </head>
 
 <body>
@@ -31,17 +81,20 @@
         <!-- navbar -->
         <!-- ============================================================== -->
         <div class="dashboard-header">
-            <nav class="navbar navbar-expand-lg bg-white fixed-top">
+            <nav class="navbar navbar-expand-lg bg-white fixed-top"></nav>
                 <a class="navbar-brand" href="./importFile.html">EBSMS</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse " id="navbarSupportedContent">
                     <ul class="navbar-nav ml-auto navbar-right-top">
-                        
+
                         <li class="nav-item dropdown nav-user">
-                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
-                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown" aria-labelledby="navbarDropdownMenuLink2">
+                            <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
+                                    src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                            <div class="dropdown-menu dropdown-menu-right nav-user-dropdown"
+                                aria-labelledby="navbarDropdownMenuLink2">
                                 <div class="nav-user-info">
                                     <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
                                 </div>
@@ -68,6 +121,7 @@
                                 Menu
                             </li>
                             <li class="nav-item ">
+<<<<<<< HEAD:confirmMSRequest.html
                                 <a class="nav-link active" href=""><i class="fa fa-fw fa-user-circle"></i>Dashboard<span
                                         class="badge badge-success">6</span></a>
                             </li>
@@ -84,6 +138,11 @@
                             <li class="nav-item ">
                                 <a class="nav-link active" href="./confirmMSRequest.html"><i class="fa fa-fw fa-user-circle"></i>Confirm
                                     Medical Supplies</a>
+=======
+                                <a class="nav-link active" href="#">
+                                    <i class="fa fa-fw fa-user-circle"></i>Dashboard <span
+                                        class="badge badge-success">6</span></a>
+>>>>>>> e933af9f0930883f2ab93d15b72095fcfff99a3d:medicalRequest.html
                             </li>
                         </ul>
                     </div>
@@ -109,8 +168,10 @@
                                 <div class="page-breadcrumb">
                                     <nav aria-label="breadcrumb">
                                         <ol class="breadcrumb">
-                                            <li class="breadcrumb-item"><a href="#" class="breadcrumb-link">Dashboard</a></li>
-                                            <li class="breadcrumb-item active" aria-current="page">Medical Supply Request</li>
+                                            <li class="breadcrumb-item"><a href="#"
+                                                    class="breadcrumb-link">Dashboard</a></li>
+                                            <li class="breadcrumb-item active" aria-current="page">Medical Supply
+                                                Request</li>
                                         </ol>
                                     </nav>
                                 </div>
@@ -123,14 +184,14 @@
                     <div class="ecommerce-widget">
 
                         <div class="row">
-                                          <!-- recent orders  -->
+                            <!-- recent orders  -->
                             <!-- ============================================================== -->
                             <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
                                 <div class="card">
                                     <h5 class="card-header">Pending Requests for Medical Supply</h5>
                                     <div class="card-body p-0">
                                         <div class="table-responsive">
-                                            <table class="table">
+                                            <table class="table" id="request">
                                                 <thead class="bg-light">
                                                     <tr class="border-0">
                                                         <th class="border-0">No.</th>
@@ -142,18 +203,6 @@
                                                     </tr>
                                                 </thead>
                                                 <tbody>
-                                                    <tr>
-                                                        <td>1</td>
-                                                        <td>
-                                                            <div class="m-r-10"><a href="requestDetail.html">MMX34583</a></div>
-                                                        </td>
-                                                        <td>Trần Thị Công Lam</td>
-                                                        <td>Nguyễn Trần Công Lý </td>
-                                                        <td>Phẫu thuật ruột thừa</td>
-                                                        <td>15/03/2019</td>
-                                                    </tr>
-                                                    
-                                                    
                                                 </tbody>
                                             </table>
                                         </div>
@@ -195,6 +244,8 @@
     <script src="assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
     <script src="assets/vendor/charts/c3charts/C3chartjs.js"></script>
     <script src="assets/libs/js/dashboard-ecommerce.js"></script>
+
+    <script>window.onload = getMedicalRequest();</script>
 </body>
- 
+
 </html>

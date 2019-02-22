@@ -13,7 +13,7 @@
     <title>Surgery Management System</title>
 </head>
 
-<body>
+<body >
     <!-- ============================================================== -->
     <!-- main wrapper -->
     <!-- ============================================================== -->
@@ -220,7 +220,67 @@
     </script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.10.8/xlsx.full.min.js">
     </script>
+<<<<<<< HEAD:importFile.html
     <script src="js/preOp.js"></script>
+=======
+    <script>
+        var infoJSON, supplyJSON;
+        function ExcelExport(event) {
+            var input = event.target;
+            var reader = new FileReader();
+            reader.onload = function () {
+                var fileData = reader.result;
+                var wb = XLSX.read(fileData, { type: 'binary' });
+
+                wb.SheetNames.forEach(function (sheetName) {
+                    var rowObj = XLSX.utils.sheet_to_row_object_array(wb.Sheets[sheetName]);
+                    
+                    switch (sheetName) {
+                        case "SurgeryProfile":
+                            parseInfo(rowObj);
+                            infoJSON = rowObj;
+                            break;
+                        case "MedicalSupply":
+                            supplyJSON = rowObj;
+                            break;
+                    }
+                })
+            };
+            reader.readAsBinaryString(input.files[0]);
+        };
+        function parseInfo(jsonObj) {
+            var table = document.getElementById('profile').getElementsByTagName('tbody')[0];
+            for (var i = 0; i < jsonObj.length; i++) {
+                var newRow = table.insertRow(table.rows.length);
+                var newColumn;
+                
+                newColumn = newRow.insertCell(0);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Patient Name"]));
+                newColumn = newRow.insertCell(1);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Gender"]));
+                newColumn = newRow.insertCell(2);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Medical Record"]));
+                newColumn = newRow.insertCell(3);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Surgery Name"]));
+                newColumn = newRow.insertCell(4);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Surgeon Name"]));
+                newColumn = newRow.insertCell(5);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Expected Date"] + 
+                " - " + jsonObj[i]["Expected Time"]));
+                newColumn = newRow.insertCell(6);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Surgery Weight"]));
+            }
+        }
+        
+        function saveSurgeryProfile() {
+            console.log(supplyJSON);
+            alert("Surgery Profile Saved");
+            // window.location.replace("import.html");
+
+            //TODO: send JSON object to sever and save profile and do appropriate actions.
+        };
+    </script>
+>>>>>>> e933af9f0930883f2ab93d15b72095fcfff99a3d:import.html
 </body>
 
 </html>
