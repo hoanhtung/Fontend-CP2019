@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="assets/libs/css/style.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/fontawesome/css/fontawesome-all.css">
+    <link rel="stylesheet" href="assets/vendor/charts/chartist-bundle/chartist.css">
+    <link rel="stylesheet" href="assets/vendor/charts/morris-bundle/morris.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="assets/vendor/charts/c3charts/c3.css">
+    <link rel="stylesheet" href="assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+    <link rel="stylesheet" href="css/tungStyle.css">
+    <title>Surgery Management System</title>
+
+    <script src="./js/tung-intraOp.js"></script>
+</head>
+<!-- ============================================================== -->
+<!-- import file  -->
+<!-- ============================================================== -->
+<body>
+    <div class="dashboard-main-wrapper">
+            <!-- ============================================================== -->
+            <!-- navbar -->
+            <!-- ============================================================== -->
+            <div class="dashboard-header">
+                <nav class="navbar navbar-expand-lg bg-white fixed-top">
+                    <a class="navbar-brand" href="./importFile.html">EBSMS</a>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                        aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse " id="navbarSupportedContent">
+                        <ul class="navbar-nav ml-auto navbar-right-top">
+
+                            <li class="nav-item dropdown nav-user">
+                                <a class="nav-link nav-user-img" href="#" id="navbarDropdownMenuLink2"
+                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><img
+                                        src="assets/images/avatar-1.jpg" alt="" class="user-avatar-md rounded-circle"></a>
+                                <div class="dropdown-menu dropdown-menu-right nav-user-dropdown"
+                                    aria-labelledby="navbarDropdownMenuLink2">
+                                    <div class="nav-user-info">
+                                        <h5 class="mb-0 text-white nav-user-name">John Abraham </h5>
+                                    </div>
+                                    <a class="dropdown-item" href="login.html"><i
+                                            class="fas fa-power-off mr-2"></i>Logout</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+            <!-- ============================================================== -->
+            <!-- end navbar -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- left sidebar -->
+            <!-- ============================================================== -->
+            <div class="nav-left-sidebar sidebar-dark">
+                <div class="menu-list">
+                    <nav class="navbar navbar-expand-lg navbar-light">
+                        <a class="d-xl-none d-lg-none" href="#">Dashboard</a>
+                        <div class="collapse navbar-collapse" id="navbarNav">
+                            <ul class="navbar-nav flex-column">
+                                <li class="nav-divider">
+                                    Menu
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link active" href="#">
+                                        <i class="fa fa-fw fa-user-circle"></i>Dashboard 
+                                        <span class="badge badge-success">6</span>
+                                    </a>
+                                </li>
+
+                                <li class="nav-item ">
+                                    <a class="nav-link active" href="./viewSchedule.html"><i class="fa fa-fw fa-user-circle"></i>View
+                                        Schedule</a>
+                                </li>
+                                <li class="nav-item ">
+                                    <a class="nav-link active" href="./confirmMSRequest.html"><i class="fa fa-fw fa-user-circle"></i>Confirm
+                                        Medical Supplies</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </nav>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- end left sidebar -->
+            <!-- ============================================================== -->
+            <!-- ============================================================== -->
+            <!-- wrapper  -->
+            <!-- ============================================================== -->
+            <div class="dashboard-wrapper">
+                <div class="dashboard-ecommerce">
+                    <div class="container-fluid dashboard-content ">
+                        <!-- ============================================================== -->
+                        <!-- pageheader  -->
+                        <!-- ============================================================== -->
+                        <div class="row">
+                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                <div class="page-header">
+                                    <h2 class="pageheader-title">Import Surgery Profile </h2>
+                                    <div class="page-breadcrumb">
+                                        <nav aria-label="breadcrumb">
+                                            <ol class="breadcrumb">
+                                                <li class="breadcrumb-item"><a href="#"
+                                                        class="breadcrumb-link">Dashboard</a></li>
+                                                <li class="breadcrumb-item active" aria-current="page">Import Surgery
+                                                    Profile</li>
+                                            </ol>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- ============================================================== -->
+                        <!-- end pageheader  -->
+                        <!-- ============================================================== -->
+                        <div class="ecommerce-widget">
+
+                            <!-- ============================================================== -->
+                            <!-- import file  -->
+                            <!-- ============================================================== -->
+                            <div class="row">
+                                    <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
+                                        <input type="file" onchange="ExcelExport(event)" id="file" />
+                                    </div>
+                                    <div class="card"></br></div> <!-- break line -->
+                                    <!-- ============================================================== -->
+                                    <!-- end of import file  -->
+                                    <!-- ============================================================== -->
+                                    <!-- surgery information  -->
+                                    <!-- ============================================================== -->
+                                
+                                    <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-12">
+                                        <div class="card">
+                                            <h5 class="card-header">Surgery Profile Information</h5>
+                                            <div class="card-body p-0">
+                                
+                                                <table class="table" id="profile">
+                                                    <thead class="bg-light">
+                                                        <tr class="border-0">
+                                                            <th class="border-0">Patient Name</th>
+                                                            <th class="border-0">Gender</th>
+                                                            <th class="border-0">Medical Record</th>
+                                                            <th class="border-0">Surgery Name</th>
+                                                            <th class="border-0">Surgeon</th>
+                                                            <th class="border-0">Surgery Excepted Date</th>
+                                                            <th class="border-0">Surgery Weight</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- ============================================================== -->
+                                    <!-- end of surgery information  -->
+                                    <!-- ============================================================== -->
+                                    <div class="col-xl-9 col-lg-12 col-md-6 col-sm-12 col-1">
+                                        <input type="submit" value="Import All" onclick="saveSurgeryProfile()" />
+                                        <input type="submit" value="Cancel"
+                                            onClick="javascript:window.location.href='import.html'" />
+                                    </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- ============================================================== -->
+            <!-- end wrapper  -->
+            <!-- ============================================================== -->
+        </div>                        
+    <script>
+        function ExcelExport(event) {
+            var input = event.target;
+            var reader = new FileReader();
+            reader.onload = function () {
+                var fileData = reader.result;
+                var wb = XLSX.read(fileData, { type: 'binary' });
+
+                wb.SheetNames.forEach(function (sheetName) {
+                    var rowObj = XLSX.utils.sheet_to_row_object_array(wb.Sheets[sheetName]);
+                    
+                    switch (sheetName) {
+                        case "SurgeryProfile":
+                            parseInfo(rowObj);
+                            break;
+                        case "Sheet2":
+                            parseSupply(rowObj);
+                            break;
+                    }
+                })
+            };
+            reader.readAsBinaryString(input.files[0]);
+        };
+        function parseInfo(jsonObj) {
+            // console.log(jsonObj);
+            var table = document.getElementById('profile').getElementsByTagName('tbody')[0];
+            for (var i = 0; i < jsonObj.length; i++) {
+                var newRow = table.insertRow(table.rows.length);
+                var newColumn;
+                
+                newColumn = newRow.insertCell(0);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Patient Name"]));
+                newColumn = newRow.insertCell(1);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Patient Gender"]));
+                newColumn = newRow.insertCell(2);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Medical Record"]));
+                newColumn = newRow.insertCell(3);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Surgery Name"]));
+                newColumn = newRow.insertCell(4);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Surgeon Name"]));
+                newColumn = newRow.insertCell(5);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Surgery Assigned Date"] + 
+                " - " + jsonObj[i]["Surgery Assigned Time"]));
+                newColumn = newRow.insertCell(6);
+                newColumn.appendChild(document.createTextNode(jsonObj[i]["Surgery Weight"]));
+            }
+        }
+        // done
+        function parseSupply(jsonStr) {
+            // console.log(jsonObj);
+            var table = document.getElementById('supply').getElementsByTagName('tbody')[0];
+            for (var i = 0; i < jsonStr.length; i++) {
+                var newRow = table.insertRow(table.rows.length);
+                var newColumn = newRow.insertCell(0);
+                newColumn.appendChild(document.createTextNode(i + 1));
+                newColumn = newRow.insertCell(1);
+                newColumn.appendChild(document.createTextNode(jsonStr[i].Code));
+                newColumn = newRow.insertCell(2);
+                newColumn.appendChild(document.createTextNode(jsonStr[i].Name));
+                newColumn = newRow.insertCell(3);
+                newColumn.appendChild(document.createTextNode(jsonStr[i].Quantity));
+            }
+        }
+        function saveSurgeryProfile() {
+            //imprort file check
+            // alert("Surgery Profile Saved");
+            window.location.replace("importFile.html");
+            alert("Surgery Profile Saved");
+
+            //TODO: send JSON object to sever and save profile and do appropriate actions.
+        };
+    </script>
+    </body>
+</html>

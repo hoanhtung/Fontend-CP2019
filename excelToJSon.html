@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>To JSON</title>
+</head>
+
+<body>
+    <input type="file" onchange="ExcelExport(event)" />
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/xlsx.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.8.0/jszip.js">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.10.8/xlsx.full.min.js">
+    </script>
+    <script>
+        function ExcelExport (event) {
+            var input = event.target;
+            var reader = new FileReader();
+            reader.onload = function () {
+                var fileData = reader.result;
+                var wb = XLSX.read(fileData, { type: 'binary' });
+
+                wb.SheetNames.forEach(function (sheetName) {
+                    console.log(sheetName)
+                    var rowObj = XLSX.utils.sheet_to_row_object_array(wb.Sheets[sheetName]);
+                    var jsonObj = JSON.stringify(rowObj);
+                    console.log(jsonObj)
+                })
+            };
+            reader.readAsBinaryString(input.files[0]);
+        };
+    </script>
+</body>
+
+</html>
