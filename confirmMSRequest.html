@@ -34,7 +34,7 @@
                 newColumn = newRow.insertCell(1);
                 var a = document.createElement('a');
                 a.appendChild(document.createTextNode(jsonObj[i]["Surgery Code"]));
-                a.href = "requestDetail.html";
+                a.href = "requestDetail.html?code=" + jsonObj[i]["Surgery Code"];
                 newColumn.appendChild(a);
 
                 newColumn = newRow.insertCell(2);
